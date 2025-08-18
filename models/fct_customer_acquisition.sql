@@ -1,7 +1,7 @@
 -- This model creates the final fact table for customer acquisition analysis.
 -- It joins new customer orders with marketing costs to attribute acquisition channels.
 
-with first_orders as (
+wITh first_orders as (
     -- Use our intermediate model which is already filtered to new customers.
     select * from {{ ref('int_customer_first_orders') }}
 ),
